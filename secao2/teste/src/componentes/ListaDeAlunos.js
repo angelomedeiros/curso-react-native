@@ -29,14 +29,16 @@ const itemEstilo = {
   height: 50,
   backgroundColor: '#DDD',
   borderWidth: 0.5,
-  borderColor: 'red'
+  borderColor: 'red',
+
+  alignItems: 'center',
+  justifyContent: 'center',
 }
 
 export const Aluno = props => (
   <View style={itemEstilo}>
-    <Text>
-      Nome: {props.nome} Nota: {props.nota}
-    </Text>
+    <Text> Nome: {props.nome} </Text>
+    <Text style={{ fontWeight: 'bold' }}> Nota: {props.nota} </Text>
   </View>
 )
 
