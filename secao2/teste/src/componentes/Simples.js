@@ -1,8 +1,8 @@
 import React from 'react'
 import { Text } from 'react-native'
-import Estilo from '../estilo/Estilo'
+import Padrao from '../estilo/Padrao'
 
 export default props => [
-  <Text style={[Estilo.ex]} key={1}>Olá...</Text>,
+  <Text style={[Padrao.ex]} key={1}>Olá...</Text>,
   <Text key={2}>{props.texto}</Text>
 ]
