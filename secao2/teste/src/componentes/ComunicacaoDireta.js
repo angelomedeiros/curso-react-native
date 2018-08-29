@@ -16,7 +16,17 @@ export const Filho = props => (
 export const Pai = props => (
   <View>
     <Text {...fonte}>Pai: {props.nome} {props.sobrenome} </Text>
-    {props.children}
+    {/* {props.children} */}
+    {/* O médodo abaixo funciona apenas para um único filho */}
+    {/* {React.cloneElement(props.children, {...props, ...props.children.props})} */}
+    {/* O médodo abaixo resolve o problema para múltiplos filhos
+      * em {...props, ...c.props} o primeiro parâmetro são os props do pai e o segundo
+      * os props do filho. Os props do filho terão prioridade sobre o do pai por terem 
+      * sido chamado depois
+    */}
+    {React.Children.map(props.children,
+      c => React.cloneElement(c, {...props, ...c.props})
+    )}
   </View>
 )
 
