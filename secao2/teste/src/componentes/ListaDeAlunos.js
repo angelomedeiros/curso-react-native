@@ -31,8 +31,11 @@ const itemEstilo = {
   borderWidth: 0.5,
   borderColor: 'red',
 
+  flexDirection: 'row',
+  // justifyContent: 'center', 
+  justifyContent: 'space-between',
+  // justifyContent: 'space-around',
   alignItems: 'center',
-  justifyContent: 'center',
 }
 
 export const Aluno = props => (
